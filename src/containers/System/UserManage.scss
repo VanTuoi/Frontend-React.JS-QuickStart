@@ -35,7 +35,7 @@
 
     &:hover {
         background-color: transparent !important;
-        color           : rgb(173, 114, 3) !important;
+        color           : rgb(18, 59, 222) !important;
     }
 }
 
@@ -48,6 +48,44 @@
 
     &:hover {
         background-color: transparent !important;
-        color           : rgb(224, 26, 16) !important;
+        color           : rgb(15, 195, 147) !important;
+    }
+}
+
+.modal-user-container {
+    .modal-user-body {
+        display  : flex;
+        gap      : 15px;
+        flex-wrap: wrap;
+
+        .input-container {
+            width         : 49%;
+            display       : flex;
+            flex-direction: column;
+
+            &.max-witdh-input {
+                width: 100%;
+            }
+
+            input {
+                border-radius: 3px;
+                height       : 30px;
+                border       : 1px solid grey;
+                outline      : none;
+                padding      : 0 10px;
+            }
+        }
+
+    }
+
+    .modal-content {
+        .modal-header {
+            button {
+                background-color: transparent;
+                color           : white;
+                border          : none;
+                font-size       : 27px;
+            }
+        }
     }
 }
