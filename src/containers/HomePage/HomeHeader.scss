@@ -1,7 +1,5 @@
 .home-header-container {
-    height: 60px;
-    width : 100%;
-
+    width: 100%;
 
     .home-header-content {
         padding: 0 40px;
@@ -162,8 +160,8 @@
         }
 
         .content-dow {
+            padding-bottom  : 10px;
             height          : 35%;
-            padding         : 0 50px;
             background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
 
             display        : flex;
