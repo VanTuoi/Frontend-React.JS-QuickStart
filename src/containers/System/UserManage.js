@@ -124,7 +124,15 @@ class UserManage extends Component {
                     />
                 }
                 <div className='mx-1'>
-                    <button className='btn btn-primary px-3' onClick={() => this.handleAddNewUser()}><i className='fas fa-plus'></i> Add new user</button>
+                    <button
+                        className='btn btn-primary px-3'
+                        onClick={() => this.handleAddNewUser()}
+                    >
+                        <i
+                            className='fas fa-plus'>
+                        </i>
+                        Add new user
+                    </button>
                 </div>
                 <div className='users-table mt-3 mx-2'>
                     <table id="customers">

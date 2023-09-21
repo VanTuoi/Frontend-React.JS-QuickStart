@@ -15,7 +15,7 @@ class Header extends Component {
 
     }
     render() {
-        const { processLogout, language } = this.props;
+        const { processLogout, language, userInfo } = this.props;
         return (
             <div className="header-container">
                 {/* thanh navigator */}
@@ -23,6 +23,10 @@ class Header extends Component {
                     <Navigator menus={adminMenu} />
                 </div>
                 <div className='languages'>
+                    <span className='welcome'>
+                        <FormattedMessage id="homeheader.welcome" /><>  </>
+                        {userInfo && userInfo.firstName ? userInfo.firstName : ''} !
+                    </span>
                     {/* đổi ngôn ngữ */}
                     <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                         <span
@@ -48,13 +52,14 @@ const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
+        userInfo: state.user.userInfo,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         processLogout: () => dispatch(actions.processLogout()),
-        changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))
+        changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language)),
     };
 };
 

@@ -14,11 +14,19 @@
         display      : flex;
         justify-items: center;
 
-        .language-vi {
-            cursor     : pointer;
+        * {
             display    : flex;
             align-items: center;
-            opacity    : 0.7;
+        }
+
+        .welcome {
+            margin-left : 10px;
+            margin-right: 10px;
+        }
+
+        .language-vi {
+            cursor : pointer;
+            opacity: 0.7;
 
             &.active {
                 opacity: 1;
@@ -27,8 +35,6 @@
         }
 
         .language-en {
-            display     : flex;
-            align-items : center;
             margin-left : 10px;
             margin-right: 10px;
             cursor      : pointer;
