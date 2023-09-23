@@ -1,13 +1,15 @@
 .home-header-container {
+
     .home-header-content {
-        padding         : 0 40px;
-        width           : 100%;
-        height          : 60px;
-        display         : flex;
-        position        : sticky;
-        top             : 0;
-        background-color: white;
-        z-index         : 10000;
+        padding            : 0 40px;
+        width              : 100%;
+        height             : 60px;
+        display            : flex;
+        // position        : sticky;
+        top                : 0;
+        background-color   : white;
+        z-index            : 10000;
+        position           : sticky; // fix tạm lỗi  or sticky
 
         .left-content {
             display    : flex;

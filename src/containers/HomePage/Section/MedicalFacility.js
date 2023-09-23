@@ -17,7 +17,7 @@ class MedicalFacility extends Component {
                             <button className='btn-section'>Xem thêm</button>
                         </div>
                         <div className='section-body'>
-                            <Slider {...settings}>
+                            <Slider {...this.props.settings}>
                                 <div className='section-customize'>
                                     <div className="bg-image section-medical-facilty " />
                                     <div className='section-content'>Hệ thống y tế 1</div>

@@ -13,7 +13,7 @@ class HandBook extends Component {
 
     render() {
         let settings = this.props.settings;
-        settings.slidesToShow = 2;
+        settings.slidesToShow = 3;
         return (
             <div className='section-share section-handbook'>
                 <div className='section-container'>
