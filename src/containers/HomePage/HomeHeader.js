@@ -48,8 +48,9 @@ class HomeHeader extends Component {
                             <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
                         </div>
                     </div>
+
                     {this.props.isShowBanner === true &&
-                        <div className='home-heade r-banner'>
+                        <div className='home-header-banner'>
                             <div className='content-up'>
                                 <div className='title1'><FormattedMessage id="banner.title1" /></div>
                                 <div className='title2'><FormattedMessage id="banner.title2" /></div>

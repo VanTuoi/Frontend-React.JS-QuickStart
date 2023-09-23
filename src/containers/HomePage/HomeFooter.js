@@ -7,13 +7,14 @@ import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './HomeFooter.scss'
 
 class HomeFooter extends Component {
 
     render() {
         let settings = this.props.settings;
         return (
-            <div celassName='home-footer'>
+            <div className='home-footer'>
                 <p className='text-center'> &copy; 2023 Tran Van Tuoi <a>Link</a></p>
             </div>
         );

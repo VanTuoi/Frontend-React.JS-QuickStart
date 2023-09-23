@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Redirect } from 'react-router-dom';
-import HomeHeader from '../../HomePage/HomeHeader';
-import './DetailDoctor.scss'
+import HomeHeader from '../HomePage/HomeHeader';
+import './DetailProduct.scss'
 
 
-class DetailDoctor extends Component {
+class DetailProduct extends Component {
 
     render() {
         const { isLoggedIn } = this.props;
@@ -14,7 +14,7 @@ class DetailDoctor extends Component {
                 <HomeHeader
                     isShowBanner={false}
                 />
-                <div className='doctor-detail-container'> Detail doctor</div>
+                <div className='doctor-detail-container'> Detail DetailProduct</div>
             </>
         );
     }
@@ -32,4 +32,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailDoctor);
+export default connect(mapStateToProps, mapDispatchToProps)(DetailProduct);

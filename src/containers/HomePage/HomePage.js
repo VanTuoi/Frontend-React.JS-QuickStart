@@ -5,7 +5,6 @@ import Specialty from './Section/Specialty';
 import MedicalFacility from './Section/MedicalFacility';
 import OutStandingDoctor from './Section/OutStandingDoctor';
 import HandBook from './Section/HandBook'
-import About from './Section/About'
 import HomeFooter from './HomeFooter'
 
 import './HomePage.scss'
@@ -21,13 +20,14 @@ class HomePage extends Component {
         };
         return (
             <>
-                <HomeHeader isShowBanner={true} />
-                <Specialty settings={settings} />
-                <MedicalFacility settings={settings} />
-                <OutStandingDoctor settings={settings} />
-                <HandBook settings={settings} />
-                <About />
-                <HomeFooter />
+                <div className='homepage-container'>
+                    <HomeHeader isShowBanner={true} />
+                    <Specialty settings={settings} />
+                    <MedicalFacility settings={settings} />
+                    <OutStandingDoctor settings={settings} />
+                    <HandBook settings={settings} />
+                    <HomeFooter />
+                </div>
             </>
         );
     }

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
-import { getAllUsers, createNewUserService, deleteUserService, editUserService } from '../../services/useService'
-import { emitter } from "../../utils/emitter"
+import { getAllUsers, createNewUserService, deleteUserService, editUserService } from '../../../services/useService'
+import { emitter } from "../../../utils/emitter"
 
 import ModalUser from './ModalUser';
 import ModalEditUser from './ModalEditUser';
@@ -105,7 +105,7 @@ class UserManage extends Component {
     render() {
         let arrusers = this.state.arrUsers;
         return (
-            <div className="user-container">
+            <div className="container user-container">
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFormParent={this.toggleUserModal}

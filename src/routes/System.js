@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Redirect, Route, Switch } from 'react-router-dom';
-import UserManage from '../containers/System/UserManage';
+import UserManage from '../containers/System/Admin/UserManage';
 import UserRedux from '../containers/System/Admin/UserRedux';
+
 import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor'
+
+import ApproveOrder from '../containers/System/ApproveOrder'
+import ImportGoods from '../containers/System/ImportGoods'
+import LookUpGoods from '../containers/System/LookUpGoods'
+import LookUpOrder from '../containers/System/LookUpOrder'
+import ManageBanner from '../containers/System/ManageBanner'
+import ManageProduct from '../containers/System/ManageProduct'
+import ManageProductFramework from '../containers/System/ManageProductFramework'
+import PromotionTrademark from '../containers/System/PromotionTrademark'
+import PromotionProduct from '../containers/System/PromotionProduct'
+import SalesStatistics from '../containers/System/PromotionTrademark'
 
 class System extends Component {
     render() {
@@ -17,7 +29,15 @@ class System extends Component {
                         <Switch>
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={UserRedux} />
-                            <Route path="/system/manage-doctor" component={ManageDoctor} />
+                            <Route path="/system/manage-banner" component={ManageBanner} />
+                            <Route path="/system/manage-product-framework" component={ManageProductFramework} />
+                            <Route path="/system/promotion-trademark" component={PromotionTrademark} />
+                            <Route path="/system/promotion-product" component={PromotionProduct} />
+                            <Route path="/system/approve-order" component={ApproveOrder} />
+                            <Route path="/system/look-up-order" component={LookUpOrder} />
+                            <Route path="/system/import-goods" component={ImportGoods} />
+                            <Route path="/system/look-up-goods" component={LookUpGoods} />
+                            <Route path="/system/sales-statistics" component={SalesStatistics} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

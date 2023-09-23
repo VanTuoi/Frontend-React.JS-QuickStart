@@ -9,7 +9,7 @@
         "fee": "Checkup package",
         "check-health": "General health check",
         "support": "Support",
-        "welcome": "welcome"
+        "welcome": "Welcome"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",
@@ -24,18 +24,26 @@
     },
     "menu": {
         "admin": {
-            "manage-user": "User system",
-            "manage-doctor": "Manage doctor",
-            "manage-admin": "Manage admins",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
-            "clinic": "Clinics",
-            "manage-clinic": "Manage clinics",
-            "specialty": "Specialties",
-            "manage-specialty": "Manage specialties",
-            "handbook": "Handbook",
-            "manage-handbook": "Manage handbook"
-        }
+            "user": "User",
+            "manage-user": "Manage User",
+            "product": "Product",
+            "manage-product": "Manage Product",
+            "home-page": "Home Page",
+            "manage-banner": "Manage Banner",
+            "manage-product-framework": "Manage Product Framework",
+            "promotion": "Promotion",
+            "promotion-trademark": "Promotion Trademark",
+            "promotion-product": "Promotion Product",
+            "manage-order": "Manage Order",
+            "approve-order": "Approve-order",
+            "look-up-order": "Look Up Order",
+            "manage-import-goods": "Manage Import Goods",
+            "import-goods": "Import Goods",
+            "look-up-goods": "Look Up Goods",
+            "statistical": "Statistical",
+            "sales-statistics": "Sales Statistics"
+        },
+        "user": {}
     },
     "manage-user": {
         "add": "Add a new user",

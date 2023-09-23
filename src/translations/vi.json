@@ -24,18 +24,26 @@
     },
     "menu": {
         "admin": {
-            "manage-user": "Nguời dùng",
-            "manage-doctor": "Quản lý bác sĩ",
-            "manage-admin": "Quản lý admin",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
-            "clinic": "Phòng khám",
-            "manage-clinic": "Quản lý phòng khám",
-            "specialty": "Chuyên khoa",
-            "manage-specialty": "Quản lý chuyên khoa",
-            "handbook": "Cẩm nang",
-            "manage-handbook": "Quản lý cẩm nang"
-        }
+            "user": "Nguời dùng",
+            "manage-user": "Quản lý Nguời dùng",
+            "product": "Sản phẩm",
+            "manage-product": "Quản lý sản phẩm",
+            "home-page": "Trang chủ",
+            "manage-banner": "Quản lý quảng cáo",
+            "manage-product-framework": "Quản lý khung sản phẩm",
+            "promotion": "Khuyến mãi",
+            "promotion-trademark": "Khuyến mãi theo thương hiệu",
+            "promotion-product": "Khuyến mãi theo sản phẩm",
+            "manage-order": "Quản lý đơn hàng",
+            "approve-order": "Duyệt đơn",
+            "look-up-order": "Tra cứu đơn hàng",
+            "manage-import-goods": "Quản lý nhập hàng",
+            "import-goods": "Nhập hàng",
+            "look-up-goods": "Tra cứu kho hàng",
+            "statistical": "Thống kê",
+            "sales-statistics": "Thống kê doanh số"
+        },
+        "user": {}
     },
     "manage-user": {
         "add": "Thêm mới người dùng",
