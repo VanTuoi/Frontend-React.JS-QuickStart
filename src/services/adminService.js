@@ -1,6 +1,10 @@
 import axios from '../axios';
 import * as queryString from 'query-string';
 
+const handleLoginApi = (userEmail, userPassword) => {
+    return axios.post('/api/login', { email: userEmail, password: userPassword })
+}
+
 const adminService = {
 
     /**
@@ -16,4 +20,4 @@ const adminService = {
 
 };
 
-export default adminService;
+export default { adminService, handleLoginApi };

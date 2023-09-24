@@ -1,6 +1,8 @@
 import actionTypes from '../actions/actionTypes';
 
 const initialState = {
+    isLoggedIn: false,
+    userInfo: null,
     isLoadingGender: false,
     genders: [],
     roles: [],
@@ -12,6 +14,26 @@ const initialState = {
 
 const adminReducer = (state = initialState, action) => {
     switch (action.type) {
+        // Login
+        case actionTypes.USER_LOGIN_SUCCESS:
+            return {
+                ...state,
+                isLoggedIn: true,
+                userInfo: action.userInfo
+            }
+        case actionTypes.USER_LOGIN_FAIL:
+            return {
+                ...state,
+                isLoggedIn: false,
+                userInfo: null
+            }
+        case actionTypes.PROCESS_LOGOUT:
+            return {
+                ...state,
+                isLoggedIn: false,
+                userInfo: null
+            }
+        // system
         case actionTypes.FETCH_GENDER_START:
             state.isLoadingGender = true;
             return {

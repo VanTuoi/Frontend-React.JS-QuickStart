@@ -56,14 +56,6 @@ class Login extends Component {
             }
             console.log('error', error.response);
         }
-        // try { 
-        //     await handleLoginApi(this.state.username, this.state.password);
-        //     console.log('run');
-        // } catch (e) {
-        //     conso
-
-        // }
-
     }
 
     handleShowHirePassword() {

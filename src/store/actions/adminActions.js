@@ -6,6 +6,19 @@ import {
 } from '../../services/useService';
 import { toast } from "react-toastify"
 
+
+export const adminLoginSuccess = (userInfo) => ({
+    type: actionTypes.ADMIN_LOGIN_SUCCESS,
+    userInfo: userInfo
+})
+export const adminLoginFail = () => ({
+    type: actionTypes.ADMIN_LOGIN_FAIL
+})
+
+export const processLogout = () => ({
+    type: actionTypes.PROCESS_LOGOUT
+})
+
 export const fetchGenderStart = () => {
 
     return async (dispatch, getState) => {
