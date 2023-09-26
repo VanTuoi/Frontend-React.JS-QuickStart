@@ -1,12 +1,19 @@
 import axios from "../axios";
 
+
+
 const handleLoginApi = (userEmail, userPassword) => {
     return axios.post('/api/login', { email: userEmail, password: userPassword })
 }
 
+<<<<<<< HEAD
 const handleRegisterApi = (userData) => {
     return axios.post('/api/register', userData);
 }
+=======
+
+
+>>>>>>> ad91e21 (sua trang admin)
 
 const getAllUsers = (inputId) => {
     return axios.get(`/api/get-all-user?id=${inputId}`);

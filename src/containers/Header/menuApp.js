@@ -11,7 +11,7 @@ export const adminMenu = [
         name: 'menu.admin.product',
         menus: [
             {
-                name: 'menu.admin.manage-product', link: '/system/user-redux'
+                name: 'menu.admin.manage-product', link: '/system/manage-product'
             },
         ]
     },

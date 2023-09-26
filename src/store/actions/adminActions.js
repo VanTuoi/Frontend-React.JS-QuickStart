@@ -12,13 +12,13 @@ export const adminLoginSuccess = (userInfo) => ({
     userInfo: userInfo
 })
 export const adminLoginFail = () => ({
-    type: actionTypes.ADMIN_LOGIN_FAIL
+    type: actionTypes.ADMIN_LOGIN_FAIL,
 })
-
 export const processLogout = () => ({
     type: actionTypes.PROCESS_LOGOUT
 })
 
+///////////////////////////////////////////////////
 export const fetchGenderStart = () => {
 
     return async (dispatch, getState) => {
@@ -104,9 +104,11 @@ export const createNewUser = (data) => {
                 dispatch(fetchAllUserStart())
                 dispatch(saveUserSuccess())
             } else {
+                toast.error('Fail to create a new user')
                 dispatch(saveUserFailed());
             }
         } catch (e) {
+            toast.error('Fail to create a new user')
             dispatch(saveUserFailed());
             console.log('fetchRoleStart error', e)
         }

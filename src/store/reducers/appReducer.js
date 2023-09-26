@@ -3,6 +3,7 @@ import actionTypes from '../actions/actionTypes';
 const initContentOfConfirmModal = {
     isOpen: false,
     messageId: "",
+    isAdmin: "NO",
     handleFunc: null,
     dataFunc: null
 }
@@ -10,7 +11,7 @@ const initContentOfConfirmModal = {
 const initialState = {
     started: true,
     language: 'vi',
-    systemMenuPath: '/system/user-manage',
+    systemMenuPath: '/home',
     contentOfConfirmModal: {
         ...initContentOfConfirmModal
     }

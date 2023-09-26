@@ -7,6 +7,7 @@ import UserRedux from '../containers/System/Admin/UserRedux';
 import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor'
 
+import ManageUser from '../containers/System/ManageUser'
 import ApproveOrder from '../containers/System/ApproveOrder'
 import ImportGoods from '../containers/System/ImportGoods'
 import LookUpGoods from '../containers/System/LookUpGoods'
@@ -27,8 +28,8 @@ class System extends Component {
                 <div className="system-container">
                     <div className="system-list">
                         <Switch>
-                            <Route path="/system/user-manage" component={UserManage} />
-                            <Route path="/system/user-redux" component={UserRedux} />
+                            <Route path="/system/user-manage" component={ManageUser} />
+                            <Route path="/system/manage-product" component={ManageProduct} />
                             <Route path="/system/manage-banner" component={ManageBanner} />
                             <Route path="/system/manage-product-framework" component={ManageProductFramework} />
                             <Route path="/system/promotion-trademark" component={PromotionTrademark} />
@@ -37,7 +38,8 @@ class System extends Component {
                             <Route path="/system/look-up-order" component={LookUpOrder} />
                             <Route path="/system/import-goods" component={ImportGoods} />
                             <Route path="/system/look-up-goods" component={LookUpGoods} />
-                            <Route path="/system/sales-statistics" component={SalesStatistics} />
+                            <Route path="/system/sales-statistics" component={ManageDoctor} />
+                            {/*SalesStatistics  */}
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

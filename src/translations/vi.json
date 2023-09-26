@@ -25,7 +25,7 @@
     "menu": {
         "admin": {
             "user": "Nguời dùng",
-            "manage-user": "Quản lý Nguời 88dùng",
+            "manage-user": "Quản lý Nguời dùng",
             "product": "Sản phẩm",
             "manage-product": "Quản lý sản phẩm",
             "home-page": "Trang chủ",
@@ -56,9 +56,30 @@
         "gender": "Giới tính",
         "positions": "Chức danh",
         "role": "Vai trò",
-        "image": "ảnh đại điện",
-        "save": "Lưu user",
-        "edit": "Lưu thay đổi"
+        "image": "Ảnh đại điện",
+        "create": "Tạo mới",
+        "save": "Chỉnh sửa user",
+        "edit": "Lưu thay đổi",
+        "delete": "Xóa user",
+        "cancel": "Hủy thay đổi"
+    },
+    "manage-rpoduct": {
+        "add": "Thêm mới người dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "first-name": "Tên",
+        "last-name": "Họ",
+        "phone-number": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "positions": "Chức danh",
+        "role": "Vai trò",
+        "image": "Ảnh đại điện",
+        "create": "Tạo mới",
+        "save": "Chỉnh sửa user",
+        "edit": "Lưu thay đổi",
+        "delete": "Xóa user",
+        "cancel": "Hủy thay đổi"
     },
     "homepage": {
         "outstanding-doctor": "Bác sĩ nổi bật tuần qua",

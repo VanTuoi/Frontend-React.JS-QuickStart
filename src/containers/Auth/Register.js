@@ -199,39 +199,11 @@ class Register extends Component {
 
         console.log('run', this.state)
         this.setState({
-            errMessage: '',
+            username: event.target.value
         })
-        try {
-            let data = await handleRegisterApi(this.state);
-
-
-            if (data && data.errCode !== 0) {
-                toast.error('Submit error');
-                console('false');
-            }
-            if (data && data.errCode === 0) {   // đăng kí thành công 
-                this.props.handleRegister(data.user);
-                toast.success('Submit success');
-                console('true');
-                this.setState({
-
-                })
-            }
-        } catch (error) {
-            if (error.response) {
-                if (error.response.data) {
-                    this.setState({
-                        errMessage: error.response.data.message,
-                    })
-                }
-            }
-            console.log('error', error.response);
-        }
     }
+    handleOnchangPassword = (event) => {
 
-
-
-    onChangeValueGender(event) {
         this.setState({
             gender: event.target.value
         })
@@ -393,8 +365,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
-        handleRegister: (userInfo) => dispatch(actions.userregisterSuccess(userInfo)),
-        goToLogin: () => dispatch(actions.goToLogin())
+        // userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo)),
     };
 };
 

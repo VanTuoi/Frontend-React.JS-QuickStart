@@ -18,6 +18,11 @@ export const CRUD_ACTIONS = {
     EDIT: 'EDIT',
     DELETE: 'DELETE',
     READ: 'READ',
+    CANCEL: 'CANCEL',
+}
+export const MANAGE_ORDER_ACTIONS = {
+    ACCEPT: 'ACCEPT',
+    REFUSE: 'REFUSE',
 }
 
 export const manageActions = {
@@ -33,4 +38,9 @@ export const dateFormat = {
 export const YesNoObj = {
     YES: 'Y',
     NO: 'N'
+}
+export const USER_ROLE = {
+    NO_ACCOUNT: 'RO',
+    ADMIN: 'R1',
+    USER: 'R2',
 }

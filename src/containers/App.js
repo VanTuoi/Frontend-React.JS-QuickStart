@@ -7,11 +7,12 @@ import { ToastContainer } from 'react-toastify';
 import CustomScrollbars from '../components/CustomScrollbars.js'
 import DetailProduct from './ProductDetailPage/DetailProduct'
 
-import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authentication';
+import { userIsAuthenticated, userIsNotAuthenticated, userIsAdmin, userIsNotAdmin } from '../hoc/authentication';
 
 import { path } from '../utils'
 
 import Home from '../routes/Home';
+import Register from './Auth/Register';
 import Login from './Auth/Login';
 // import Register from '../routes/Register'
 import Header from './Header/Header';
@@ -48,15 +49,16 @@ class App extends Component {
                 <Router history={history}>
                     <div className="main-container">
                         {/* {this.props.isLoggedIn && <Header />} */}
+
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
                                 <Switch>
-                                    <Route path={"/register"} exact component={(Register)} />
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.HOMEPAGE} exact component={(HomePage)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                     <Route path={path.DETAIL_DOCTOR} component={DetailProduct} />
+
                                 </Switch>
                             </CustomScrollbars>
                         </div>

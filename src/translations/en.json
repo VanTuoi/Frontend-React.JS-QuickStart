@@ -57,8 +57,11 @@
         "positions": "Positions",
         "role": "Role",
         "image": "Avatar",
+        "create": "Create new",
         "save": "Save user",
-        "edit": "Edit user"
+        "edit": "Edit user",
+        "delete": "Delete user",
+        "cancel": "Cancel edit"
     },
     "homepage": {
         "outstanding-doctor": "Doctor featured last week ",

@@ -17,11 +17,12 @@
             width      : 25%;
 
             .header-logo {
-                height         : 100%;
-                width          : 100%;
-                background     : url(../../assets/images/logo.svg) center center no-repeat;
-                background-size: 50%;
-                margin-right   : -80px;
+                height            : 100%;
+                width             : 100%;
+                // background     : url(../../assets/images/logo.svg) center center no-repeat;
+                border            : 1px solid black;
+                background-size   : 50%;
+                margin-right      : -80px;
             }
 
             i {
@@ -37,7 +38,8 @@
             display        : flex;
             justify-content: space-between;
             align-items    : center;
-            width          : 50%;
+
+            width: 60%;
 
             .subs-title {
                 font-weight: 400;
@@ -51,6 +53,12 @@
             justify-content: flex-end;
             width          : 25%;
 
+            .chird-content {
+                height      : 50px;
+                width       : 120px;
+                border      : 1px solid black;
+                margin-right: 20px;
+            }
 
             .support {
                 padding-right: 50px;
