@@ -13,8 +13,10 @@ import { path } from '../utils'
 
 import Home from '../routes/Home';
 import Login from './Auth/Login';
+// import Register from '../routes/Register'
 import Header from './Header/Header';
 import System from '../routes/System';
+import Register from '../containers/Auth/Register'
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
@@ -49,6 +51,7 @@ class App extends Component {
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
                                 <Switch>
+                                    <Route path={"/register"} exact component={(Register)} />
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.HOMEPAGE} exact component={(HomePage)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />

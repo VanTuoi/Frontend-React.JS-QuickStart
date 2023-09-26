@@ -36,6 +36,19 @@ const appReducer = (state = initialState, action) => {
                 ...state,
                 language: action.language,
             }
+        case actionTypes.PROCESS_GOTO_LOGIN:
+            console.log('run login');
+            state.systemMenuPath = '/home'
+            return {
+                ...state,
+                systemMenuPath: ''
+            }
+        case actionTypes.PROCESS_GOTO_REGISTER:
+            console.log('run reg');
+            return {
+                ...state,
+                systemMenuPath: '/a'
+            }
         default:
             return state;
     }

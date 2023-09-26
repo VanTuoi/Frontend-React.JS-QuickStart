@@ -13,3 +13,10 @@ export const changeLanguageApp = (language) => ({
     type: actionTypes.CHANGE_LANGUAGE,
     language: language,
 })
+export const goToLogin = () => ({
+    type: actionTypes.PROCESS_GOTO_LOGIN
+})
+export const goToRegister = () => ({
+    type: actionTypes.PROCESS_GOTO_REGISTER
+})
+

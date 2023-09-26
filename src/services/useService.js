@@ -4,6 +4,10 @@ const handleLoginApi = (userEmail, userPassword) => {
     return axios.post('/api/login', { email: userEmail, password: userPassword })
 }
 
+const handleRegisterApi = (userData) => {
+    return axios.post('/api/register', userData);
+}
+
 const getAllUsers = (inputId) => {
     return axios.get(`/api/get-all-user?id=${inputId}`);
 }
@@ -37,5 +41,5 @@ const saveDetailDoctorService = (data) => {
 export {
     handleLoginApi, getAllUsers, createNewUserService,
     deleteUserService, editUserService, getAllCodeService,
-    getTopDoctorHomeService, getAllDoctors, saveDetailDoctorService,
+    getTopDoctorHomeService, getAllDoctors, saveDetailDoctorService, handleRegisterApi
 }
