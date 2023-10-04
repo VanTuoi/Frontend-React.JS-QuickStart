@@ -24,6 +24,7 @@
     },
     "menu": {
         "admin": {
+            "overview": "Tổng quan",
             "user": "Nguời dùng",
             "manage-user": "Quản lý Nguời dùng",
             "product": "Sản phẩm",

@@ -2,7 +2,7 @@ import actionTypes from './actionTypes';
 import {
     createNewUserService, getAllCodeService, getAllUsers,
     deleteUserService, editUserService, getTopDoctorHomeService,
-    getAllDoctors, saveDetailDoctorService,
+    getAllDoctors, saveDetailDoctorService, getSaleOverTimeService
 } from '../../services/useService';
 import { toast } from "react-toastify"
 
@@ -272,3 +272,59 @@ export const saveDetailDoctor = (data) => {
 
     }
 }
+
+////////////////////////////////////////////////////////////////
+export const getSaleOverTime = (time) => {
+    return async (dispatch, getState) => {
+        try {
+            let res
+            // = await getSaleOverTimeService(data);        // time theo tuan thang nam
+            if (res && res.errCode === 0) {
+                toast.success("Get sales over time success")
+                dispatch({
+                    type: actionTypes.GET_SALES_OVER_TIME_SUCCESS,
+                    data: res
+                })
+            } else {
+                toast.error("Get sales over time faild")
+                dispatch({
+                    type: actionTypes.GET_SALES_OVER_TIME_FAILDED,
+                })
+            }
+        } catch (e) {
+            toast.error("SGet sales over time faild")
+            dispatch({
+                type: actionTypes.GET_SALES_OVER_TIME_FAILDED,
+            })
+        }
+
+    }
+}
+export const getRevenueOverTime = (time) => {
+    return async (dispatch, getState) => {
+        try {
+            let res
+            // = await getSaleOverTimeService(data);        // time theo tuan thang nam
+            if (res && res.errCode === 0) {
+                toast.success("Get revenue over time success")
+                dispatch({
+                    type: actionTypes.GET_REVENUE_OVER_TIME_SUCCESS,
+                    data: res
+                })
+            } else {
+                toast.error("Get revenue over time faild")
+                dispatch({
+                    type: actionTypes.GET_REVENUE_OVER_TIME_FAILDED,
+                })
+            }
+        } catch (e) {
+            toast.error("SGet revenue over time faild")
+            dispatch({
+                type: actionTypes.GET_REVENUE_OVER_TIME_FAILDED,
+            })
+        }
+
+    }
+}
+
+

@@ -85,7 +85,7 @@ class ApproveOrder extends Component {
             }
         })
     }
-    handleEditUser = (order) => {
+    handleEditOrder = (order) => {
         this.setState({
             codeOrders: order.codeOrders,
             listProduct: order.listProduct,
@@ -176,138 +176,233 @@ class ApproveOrder extends Component {
         let showAllUser = this.state.showAllUser
         let { codeOrders, listProduct, userId, dateCrate, dateApproval, totalPrice } = this.state
         return (
-            <div className='user-redux-container'>
-                <div className="text-center" ></div>
-                <div className='title'>
-                    Quản lý đơn hàng
-                </div>
+            // <div className='user-redux-container'>
+            //     <div className="text-center" ></div>
+            //     <div className='title'>
+            //         Quản lý đơn hàng
+            //     </div>
 
-                <div className='user-redux-body'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-3'>
-                                <label>Mã đơn</label>
-                                <input className='form-control' type='text'
-                                    value={codeOrders}
-                                    onChange={(event) => this.onChangeInput(event, 'codeOrders')}
-                                />
-                            </div>
-                            <div className='col-3'>
-                                <label>ID chủ đơn</label>
-                                <input className='form-control' type='text'
-                                    value={userId}
-                                    onChange={(event) => this.onChangeInput(event, 'userId')}
-                                />
-                            </div>
-                            <div className='col-6'>
-                                <label>Danh sách sản phẩm mua</label>
-                                <input className='form-control' type='text'
-                                    value={listProduct}
-                                    onChange={(event) => this.onChangeInput(event, 'listProduct')}
-                                />
-                            </div>
-                            <div className='col-3'>
-                                <label>Ngày tạo đơn</label>
-                                <input className='form-control' type='text'
-                                    value={dateCrate}
-                                    onChange={(event) => this.onChangeInput(event, 'dateCrate')}
-                                />
-                            </div>
-                            <div className='col-3'>
-                                <label>Ngày duyệt đơn</label>
-                                <input className='form-control' type='text'
-                                    value={dateApproval}
-                                    onChange={(event) => this.onChangeInput(event, 'DateApproval')}
-                                />
-                            </div>
-                            <div className='col-3'>
-                                <label>Tổng tiền</label>
-                                <input className='form-control' type='text'
-                                    value={totalPrice}
-                                    onChange={(event) => this.onChangeInput(event, 'totalPrice')}
-                                />
-                            </div>
+            //     <div className='user-redux-body'>
+            //         <div className='container'>
+            //             <div className='row'>
+            //                 <div className='col-3'>
+            //                     <label>Mã đơn</label>
+            //                     <input className='form-control' type='text'
+            //                         value={codeOrders}
+            //                         onChange={(event) => this.onChangeInput(event, 'codeOrders')}
+            //                     />
+            //                 </div>
+            //                 <div className='col-3'>
+            //                     <label>ID chủ đơn</label>
+            //                     <input className='form-control' type='text'
+            //                         value={userId}
+            //                         onChange={(event) => this.onChangeInput(event, 'userId')}
+            //                     />
+            //                 </div>
+            //                 <div className='col-6'>
+            //                     <label>Danh sách sản phẩm mua</label>
+            //                     <input className='form-control' type='text'
+            //                         value={listProduct}
+            //                         onChange={(event) => this.onChangeInput(event, 'listProduct')}
+            //                     />
+            //                 </div>
+            //                 <div className='col-3'>
+            //                     <label>Ngày tạo đơn</label>
+            //                     <input className='form-control' type='text'
+            //                         value={dateCrate}
+            //                         onChange={(event) => this.onChangeInput(event, 'dateCrate')}
+            //                     />
+            //                 </div>
+            //                 <div className='col-3'>
+            //                     <label>Ngày duyệt đơn</label>
+            //                     <input className='form-control' type='text'
+            //                         value={dateApproval}
+            //                         onChange={(event) => this.onChangeInput(event, 'DateApproval')}
+            //                     />
+            //                 </div>
+            //                 <div className='col-3'>
+            //                     <label>Tổng tiền</label>
+            //                     <input className='form-control' type='text'
+            //                         value={totalPrice}
+            //                         onChange={(event) => this.onChangeInput(event, 'totalPrice')}
+            //                     />
+            //                 </div>
 
-                            {/* <div className='col-12 my-3'>
-                                <button
-                                    class={this.state.actions === CRUD_ACTIONS.CREATE ? "btn m-1 btn-success" : "btn m-1 btn-warning"}
-                                    onClick={() => this.handleCreateUser()}
-                                >
-                                    {this.state.actions === CRUD_ACTIONS.CREATE ?
-                                        <FormattedMessage id="manage-user.create" />
-                                        :
-                                        <FormattedMessage id="manage-user.cancel" />
-                                    }
-                                </button>
-                                <button
-                                    disabled={selectedOption === '' ? true : false}
-                                    class={this.state.actions === CRUD_ACTIONS.EDIT ? "btn m-1 btn-success" : "btn m-1 btn-primary"}
-                                    onClick={() => this.handleSaveUser()}
-                                >
-                                    {this.state.actions === CRUD_ACTIONS.EDIT ?
-                                        <FormattedMessage id="manage-user.edit" />
+            //                 <div className='col-12 my-3'>
+            //                     <button
+            //                         class={this.state.actions === CRUD_ACTIONS.EDIT ? "btn m-1 btn-success" : "btn m-1 btn-warning"}
+            //                         onClick={() => this.handleCreateUser()}
+            //                     >
+            //                         {this.state.actions === CRUD_ACTIONS.CREATE ?
+            //                             <FormattedMessage id="manage-user.create" />
+            //                             :
+            //                             <FormattedMessage id="manage-user.cancel" />
+            //                         }
+            //                     </button>
+            //                     <button
+            //                         disabled={selectedOption === '' ? true : false}
+            //                         class={this.state.actions === CRUD_ACTIONS.EDIT ? "btn m-1 btn-success" : "btn m-1 btn-primary"}
+            //                         onClick={() => this.handleSaveUser()}
+            //                     >
+            //                         {this.state.actions === CRUD_ACTIONS.EDIT ?
+            //                             <FormattedMessage id="manage-user.edit" />
 
-                                        :
-                                        <FormattedMessage id="manage-user.save" />
-                                    }
-                                </button>
-                                <button
-                                    disabled={selectedOption === '' ? true : false}
-                                    class="btn m-1 btn-danger"
-                                    onClick={(event) => this.handleDeleteUser(event)}
-                                >
-                                    <FormattedMessage id="manage-user.delete" />
-                                </button>
-                            </div> */}
-                            <div className='col-10'>
-                                <div className="row more-infor">
-                                    <div className="col-4 form-group">
-                                        <label>Chọn người dùng </label>
-                                        {console.log(this.state.listUsers)}
-                                        <Select
-                                            value={this.state.selectedOption}
-                                            onChange={this.handleChange}
-                                            options={this.state.listUsersSelect}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+            //                             :
+            //                             <FormattedMessage id="manage-user.save" />
+            //                         }
+            //                     </button>
+            //                     <button
+            //                         disabled={selectedOption === '' ? true : false}
+            //                         class="btn m-1 btn-danger"
+            //                         onClick={(event) => this.handleDeleteUser(event)}
+            //                     >
+            //                         <FormattedMessage id="manage-user.delete" />
+            //                     </button>
+            //                 </div>
+            //                 <div className='col-10'>
+            //                     <div className="row more-infor">
+            //                         <div className="col-4 form-group">
+            //                             <label>Chọn người dùng </label>
+            //                             {console.log(this.state.listUsers)}
+            //                             <Select
+            //                                 value={this.state.selectedOption}
+            //                                 onChange={this.handleChange}
+            //                                 options={this.state.listUsersSelect}
+            //                             />
+            //                         </div>
+            //                     </div>
+            //                 </div>
 
-                            <div className="col-12 form-group">
-                                {showAllUser === true ?
-                                    <>
-                                        <button
-                                            class="btn m-2 btn-warning"
-                                            onClick={(event) => this.handleShowAllUser(event)}
-                                        >
-                                            Ẩn danh sách đơn chưa duyệt
-                                        </button>
+            //                 <div className="col-12 form-group">
+            //                     {showAllUser === true ?
+            //                         <>
+            //                             <button
+            //                                 class="btn m-2 btn-warning"
+            //                                 onClick={(event) => this.handleShowAllUser(event)}
+            //                             >
+            //                                 Ẩn danh sách đơn chưa duyệt
+            //                             </button>
 
-                                        <div className='col-12 mb-5'>
-                                            <TableManageUser
-                                                handleEditUser={this.handleEditUser}
-                                                actions={this.state.actions}
-                                            />
-                                        </div>
+            //                             <div className='col-12 mb-5'>
+            //                                 <TableManageUser
+            //                                     handleEditUser={this.handleEditUser}
+            //                                     actions={this.state.actions}
+            //                                 />
+            //                             </div>
 
-                                    </>
-                                    :
-                                    <>
-                                        <button
-                                            class="btn m-2 btn-primary"
-                                            onClick={(event) => this.handleShowAllUser(event)}
-                                        >
-                                            Hiển thị danh sách đơn chưa duyệt
-                                        </button>
-                                    </>
+            //                         </>
+            //                         :
+            //                         <>
+            //                             <button
+            //                                 class="btn m-2 btn-primary"
+            //                                 onClick={(event) => this.handleShowAllUser(event)}
+            //                             >
+            //                                 Hiển thị danh sách đơn chưa duyệt
+            //                             </button>
+            //                         </>
 
-                                }
-                            </div>
-                        </div>
+            //                     }
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     </div>
+
+            // </div >
+            <div className='user-redux-container mx-5'>
+                <div className="text-center" >
+                    <div className='title m-4'>
+                        Duyệt đơn
                     </div>
+                    <table id="TableManageUser">
+                        <tbody>
+                            <tr>
+                                <th className='text-center col-1'>STT</th>
+                                <th className='text-center col-2'>Tên chủ đơn</th>
+                                <th className='text-center col-1'>Ngày tạo</th>
+                                <th className='text-center col-3'>Danh sách sản phẩm</th>
+                                <th className='text-center col-1'>Tổng tiền</th>
+                                <th className='text-center col-1'>Trạng thái</th>
+                                <th className='text-center col-1'>Hành động</th>
+                            </tr>
+                            <tr key="index">
+                                <td>
+                                    1
+                                </td>
+                                <td>Trần Văn An</td>
+                                <td>08:23 26/9/2023</td>
+                                <td>
+                                    <table className='col-12'>
+                                        <tbody>
+                                            <tr>
+                                                <td>Item 1</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item 2</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item 3</td>
+                                                <td>8</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>12.000.000đ</td>
+                                <td>
+                                    Chưa duyệt
+                                </td>
+                                <td>
+                                    <button
+
+                                        className="btn-tick"><i className="fas fa-check "></i></button>
+                                    <button
+                                        className="btn-delete"><i className="fas fa-trash"></i></button>
+                                </td>
+
+                            </tr>
+                            <tr key="index">
+                                <td>
+                                    1
+                                </td>
+                                <td>Trần Văn An</td>
+                                <td>08:23 26/9/2023</td>
+                                <td>
+                                    <table className='col-12'>
+                                        <tbody>
+                                            <tr>
+                                                <td>Item 1</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item 2</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item 3</td>
+                                                <td>8</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>12.000.000đ</td>
+                                <td>
+                                    Chưa duyệt
+                                </td>
+                                <td>
+                                    <button
+
+                                        className="btn-tick"><i className="fas fa-check "></i></button>
+                                    <button
+                                        className="btn-delete"><i className="fas fa-trash"></i></button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-            </div >
+            </div>
         )
     }
 

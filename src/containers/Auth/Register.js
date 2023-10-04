@@ -31,11 +31,8 @@ class Register extends Component {
             gender: 'Male',
             isShowPassword: false,
             isShowPasswordConfirm: false,
-
-
-
         }
-        this.onChangeValueGender = this.onChangeValueGender.bind(this);
+        // this.onChangeValueGender = this.onChangeValueGender.bind(this);
     }
     handleOnchangeFirstName = (event) => {
 
@@ -193,7 +190,7 @@ class Register extends Component {
     //     }
     //     return true;
     // }
-    handleRegister = async () => {
+    handleRegister = async (event) => {
         // let check = this.isValidInputs();
         // let userData = { firstname, lastname, password, passwordconfirm, phonenumber, email };
 
@@ -221,7 +218,7 @@ class Register extends Component {
         })
     }
     handleGoToLogin() {
-        this.props.goToLogin();
+        this.props.history.push(`/login`);
     }
 
     render() {

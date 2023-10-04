@@ -59,11 +59,12 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
+        console.log(this.state)
         this.setState({
             errMessage: '',
         })
         try {
-            let data = await handleLoginApi(this.state.username, this.state.password);
+            let data = await handleLoginApi(this.state.phonenumber, this.state.password);
             if (data && data.errCode !== 0) {
                 this.setState({
                     errMessage: data.message,
@@ -89,6 +90,9 @@ class Login extends Component {
         this.setState({
             isShowPassword: !this.state.isShowPassword,
         })
+    }
+    handleGoToRegister() {
+        this.props.history.push(`/register`);
     }
     render() {
         let { phonenumber, checkphonenumber, password, checkpassword } = this.state;
@@ -140,7 +144,7 @@ class Login extends Component {
                         </div>
                         <div className='col-12 text-center' >
                             Bạn chưa có tài khoản <></>
-                            <a href='http://localhost:3000/register'>Đăng ký</a>
+                            <a onClick={(() => this.handleGoToRegister())}>Đăng ký</a>
                         </div>
                         <span className='col-12 text-center mt-3'>Hoặc đăng nhập với:</span>
                         <div className='col-12 social-login text-center'>

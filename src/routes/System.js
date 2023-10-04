@@ -7,6 +7,7 @@ import UserRedux from '../containers/System/Admin/UserRedux';
 import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor'
 
+import Overview from '../containers/System/Overview'
 import ManageUser from '../containers/System/ManageUser'
 import ApproveOrder from '../containers/System/ApproveOrder'
 import ImportGoods from '../containers/System/ImportGoods'
@@ -18,6 +19,7 @@ import ManageProductFramework from '../containers/System/ManageProductFramework'
 import PromotionTrademark from '../containers/System/PromotionTrademark'
 import PromotionProduct from '../containers/System/PromotionProduct'
 import SalesStatistics from '../containers/System/PromotionTrademark'
+import './System.scss'
 
 class System extends Component {
     render() {
@@ -28,6 +30,7 @@ class System extends Component {
                 <div className="system-container">
                     <div className="system-list">
                         <Switch>
+                            <Route path="/system/overview" component={Overview} />
                             <Route path="/system/user-manage" component={ManageUser} />
                             <Route path="/system/manage-product" component={ManageProduct} />
                             <Route path="/system/manage-banner" component={ManageBanner} />

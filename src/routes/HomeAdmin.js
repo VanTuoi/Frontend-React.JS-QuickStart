@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class Home extends Component {
+class HomeAdmin extends Component {
 
     render() {
-<<<<<<< HEAD
         const { isLoggedIn, systemMenuPath } = this.props;
-        let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/home';
-=======
-        const { isLoggedIn, isAdmin } = this.props;
-        let linkToRedirect = isLoggedIn ? '/home' : '/home';
->>>>>>> ad91e21 (sua trang admin)
+        let linkToRedirect = isLoggedIn ? '/system/overview' : '/login';
 
         return (
             <Redirect to={linkToRedirect} />
@@ -32,4 +27,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeAdmin);

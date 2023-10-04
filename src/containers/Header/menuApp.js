@@ -1,5 +1,13 @@
 export const adminMenu = [
     { //quan ly nguoi dung
+        name: 'menu.admin.overview',
+        menus: [
+            {
+                name: 'menu.admin.overview', link: '/system/overview'
+            },
+        ]
+    },
+    { //quan ly nguoi dung
         name: 'menu.admin.user',
         menus: [
             {

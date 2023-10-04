@@ -1,5 +1,7 @@
 export const path = {
     HOME: '/',
+    CART: '/cart',
+    HOME_ADMIN: '/system',
     HOMEPAGE: '/home',
     LOGIN: '/login',
     REGISTER: '/register',

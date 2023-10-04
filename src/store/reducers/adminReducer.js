@@ -10,6 +10,14 @@ const initialState = {
     users: [],
     topDoctors: [],
     allDoctors: [],
+
+    sales: [
+        { labels: '', value: '' },
+    ],
+    revenue: [
+        { labels: '', value: '' },
+    ],
+
 }
 
 const adminReducer = (state = initialState, action) => {
@@ -104,6 +112,29 @@ const adminReducer = (state = initialState, action) => {
             }
         case actionTypes.FETCH_ALL_DOCTORS_FAILDED:
             state.allDoctors = [];
+            return {
+                ...state,
+            }
+
+
+        //////////////////////////////////////////////////////////////
+        case actionTypes.GET_SALES_OVER_TIME_SUCCESS:
+            state.sales = action.data;
+            return {
+                ...state,
+            }
+        case actionTypes.GET_SALES_OVER_TIME_FAILDED:
+            state.sales = [];
+            return {
+                ...state,
+            }
+        case actionTypes.GET_REVENUE_OVER_TIME_SUCCESS:
+            state.revenue = action.data;
+            return {
+                ...state,
+            }
+        case actionTypes.GET_REVENUE_OVER_TIME_FAILDED:
+            state.revenue = [];
             return {
                 ...state,
             }

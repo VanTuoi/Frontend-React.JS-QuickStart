@@ -26,12 +26,12 @@
     color           : white;
 }
 
-.btn-edit {
+.btn-tick {
     width     : 50px;
     border    : none;
     outline   : none;
     background: transparent;
-    color     : orange;
+    color     : rgb(13, 255, 0);
 
     &:hover {
         background-color: transparent !important;
@@ -44,11 +44,11 @@
     border    : none;
     outline   : none;
     background: transparent;
-    color     : rgb(235, 25, 15);
+    color     : rgb(235, 96, 15);
 
     &:hover {
         background-color: transparent !important;
-        color           : rgb(15, 195, 147) !important;
+        color           : rgb(195, 15, 15) !important;
     }
 }
 

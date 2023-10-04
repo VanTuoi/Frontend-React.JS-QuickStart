@@ -11,13 +11,15 @@ import { userIsAuthenticated, userIsNotAuthenticated, userIsAdmin, userIsNotAdmi
 
 import { path } from '../utils'
 
-import Home from '../routes/Home';
+import HomeUser from '../routes/HomeUser';
+import Cart from '../containers/Cart/Cart';
+import HomeAdmin from '../routes/HomeAdmin';
 import Register from './Auth/Register';
 import Login from './Auth/Login';
 // import Register from '../routes/Register'
 import Header from './Header/Header';
 import System from '../routes/System';
-import Register from '../containers/Auth/Register'
+// import Register from '../containers/Auth/Register'
 
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
@@ -53,7 +55,10 @@ class App extends Component {
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
                                 <Switch>
-                                    <Route path={path.HOME} exact component={(Home)} />
+                                    <Route path={path.REGISTER} exact component={(Register)} />
+                                    <Route path={path.CART} exact component={(Cart)} />
+                                    <Route path={path.HOME} exact component={(HomeUser)} />
+                                    <Route path={path.HOME_ADMIN} exact component={(HomeAdmin)} />
                                     <Route path={path.HOMEPAGE} exact component={(HomePage)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
