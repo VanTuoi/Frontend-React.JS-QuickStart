@@ -1,0 +1,33 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+.section-share {
+    .section-container {
+        .section-header {
+            .title-section {}
+
+            .title-section-NewProduct {
+                background: #42bcf4 !important;
+                background-image: linear-gradient(120deg, #42bcf4 0%, #004c70 50%, #42bcf4 100%) !important;
+            }
+
+            .btn-section {}
+        }
+
+        a .section-body {
+            .section-customize {
+                .bg-image {}
+
+                .section-MostOutStanding {}
+
+                .section-content {}
+            }
+        }
+    }
+
+    .NewProduct {
+        border: 2px solid #42bcf4;
+    }
+}

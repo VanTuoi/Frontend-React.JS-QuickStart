@@ -2,14 +2,14 @@ import actionTypes from '../actions/actionTypes';
 
 const initialState = {
     isLoggedIn: false,
-    userInfo: null,
-    isLoadingGender: false,
-    genders: [],
-    roles: [],
-    positions: [],
-    users: [],
-    topDoctors: [],
-    allDoctors: [],
+    userInfo: null,     // thông tin admin
+    roles: [],          // quyền
+
+    users: [],          // ds người dùng
+    products: [],       // ds san pham
+    orders: [],         // ds don hang
+
+
 
     sales: [
         { labels: '', value: '' },
@@ -23,13 +23,13 @@ const initialState = {
 const adminReducer = (state = initialState, action) => {
     switch (action.type) {
         // Login
-        case actionTypes.USER_LOGIN_SUCCESS:
+        case actionTypes.ADMIN_LOGIN_SUCCESS:
             return {
                 ...state,
                 isLoggedIn: true,
                 userInfo: action.userInfo
             }
-        case actionTypes.USER_LOGIN_FAIL:
+        case actionTypes.ADMIN_LOGIN_FAIL:
             return {
                 ...state,
                 isLoggedIn: false,
@@ -42,80 +42,36 @@ const adminReducer = (state = initialState, action) => {
                 userInfo: null
             }
         // system
-        case actionTypes.FETCH_GENDER_START:
-            state.isLoadingGender = true;
-            return {
-                ...state,
-            }
-        case actionTypes.FETCH_GENDER_SUCCCESS:
-            state.isLoadingGender = false;
-            state.genders = action.data;
-            return {
-                ...state,
-
-            }
-        case actionTypes.FETCH_GENDER_FAIDED:
-            state.isLoadingGender = false;
-            state.genders = [];
-            return {
-                ...state,
-
-            }
-        case actionTypes.FETCH_POSITION_SUCCCESS:
-            state.positions = action.data;
-            return {
-                ...state,
-
-            }
-        case actionTypes.FETCH_POSITION_FAIDED:
-            state.positions = [];
-            return {
-                ...state,
-
-            }
-        case actionTypes.FETCH_ROLE_SUCCCESS:
+        case actionTypes.GET_ROLE_SUCCCESS:
             state.roles = action.data;
             return {
                 ...state,
-
             }
-        case actionTypes.FETCH_ROLE_FAIDED:
+        case actionTypes.GET_ROLE_FAIDED:
             state.roles = [];
             return {
                 ...state,
             }
-        case actionTypes.FETCH_ALL_USERS_SUCCESS:
+        case actionTypes.GET_ALL_USERS_SUCCESS:
             state.users = action.users;
             return {
                 ...state,
             }
-        case actionTypes.FETCH_ALL_USERS_FAILDED:
+        case actionTypes.GET_ALL_USERS_FAILDED:
             state.users = [];
             return {
                 ...state,
             }
-        case actionTypes.FETCH_TOP_DOCTORS_SUCCESS:
-            state.topDoctors = action.dataDoctor;
-            state.users = [];
+        case actionTypes.GET_ALL_PRODUCT_SUCCESS:
+            state.products = action.products;
             return {
                 ...state,
             }
-        case actionTypes.FETCH_TOP_DOCTORS_FAILDED:
-            state.topDoctors = [];
+        case actionTypes.GET_ALL_PRODUCT_FAILDED:
+            state.products = [];
             return {
                 ...state,
             }
-        case actionTypes.FETCH_ALL_DOCTORS_SUCCESS:
-            state.allDoctors = action.dataDoctor;
-            return {
-                ...state,
-            }
-        case actionTypes.FETCH_ALL_DOCTORS_FAILDED:
-            state.allDoctors = [];
-            return {
-                ...state,
-            }
-
 
         //////////////////////////////////////////////////////////////
         case actionTypes.GET_SALES_OVER_TIME_SUCCESS:

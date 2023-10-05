@@ -1,0 +1,130 @@
+.container-cart {
+    background-color   : #F0F0F0;
+    // border          : 1px solid rgb(187, 255, 0);
+    display            : flex;
+    align-items        : center;
+
+    .container {
+        height   : 2000px;
+        // width : 2000px;
+
+        .content {
+            max-width          : 600px;
+            padding            : 15px;
+            background-color   : #FFFFFF;
+            height             : 100%;
+            // border          : 1px solid rgb(212, 255, 0);
+
+            .item {
+                padding            : 10px;
+                // margin       : 10px;
+                height             : 100px;
+                // border          : 1px solid rgb(212, 255, 0);
+                display            : flex;
+                width              : 100%;
+                border-bottom      : 1px solid #CCCCCC;
+
+                .content-item {
+                    width     : 80%;
+                    // border : 1px solid rgb(98, 0, 255);
+                    display   : flex;
+
+                    .image-item {
+                        width                    : 30%;
+                        // border             : 1px solid rgb(255, 106, 0);
+                        // background-image      : url('../../../assets/img-product/lenovo-v14-g3-iap-i5-82ts005rvn-thumb-400x400.jpg');
+                        background-size          : contain;
+                        background-repeat        : no-repeat;
+                        background-position      : center;
+
+                    }
+
+                    .title-item {
+                        font-weight   : 700;
+                        width         : 70%;
+                        // border     : 1px solid rgb(132, 255, 0);
+                    }
+
+                    .title-item-color {
+                        font-size     : 13px;
+                        font-weight   : 500;
+                        width         : 70%;
+                        // border     : 1px solid rgb(132, 255, 0);
+                    }
+                }
+
+                .price-item {
+                    width: 20%;
+
+                    font-weight      : 500;
+                    // border        : 1px solid rgb(0, 255, 21);
+                    display          : flex;
+                    flex-direction   : column;
+                    display          : flex;
+                    flex-direction   : column;
+
+                    .price-item-top {
+                        height     : 60%;
+                        margin-top : 5px;
+                        font-size  : 16px;
+                        font-weight: 500;
+                        color      : red;
+                    }
+
+                    .number-item {
+                        height         : 40%;
+                        justify-content: center;
+                        display        : flex;
+
+
+                        .btn-number-edit {
+                            color          : #288AD6;
+                            font-size      : 17px;
+                            font-weight    : 700;
+                            height         : 30px;
+                            width          : 30px;
+                            justify-content: center;
+                            display        : flex;
+                            border         : 1px solid #CCCCCC;
+                            cursor         : pointer;
+                            align-items    : center;
+                        }
+
+                        .btn-number {
+                            font-size      : 17px;
+                            font-weight    : 500;
+                            height         : 30px;
+                            width          : 40px;
+                            justify-content: center;
+                            display        : flex;
+                            border         : 1px solid #CCCCCC;
+                            cursor         : pointer;
+                            align-items    : center;
+                        }
+                    }
+                }
+            }
+
+            .total {
+                border-bottom: 1px solid #CCCCCC;
+
+                .total-text {
+                    font-size  : 14px;
+                    font-weight: 500;
+                    margin-left: -20px;
+                }
+            }
+
+            .total-2 {
+                border-bottom: 1px solid #CCCCCC;
+
+                .total-text {
+                    font-size  : 18px;
+                    font-weight: 600;
+                    margin-left: -20px;
+                    color      : red;
+                }
+            }
+        }
+    }
+}

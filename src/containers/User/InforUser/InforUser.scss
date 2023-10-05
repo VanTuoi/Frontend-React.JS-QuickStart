@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.infoUser {
+    hr {
+        color: #ddd;
+        background-color: #ddd;
+        border-top: 1px solid #ddd;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+
+        display: table;
+        border-collapse: separate;
+        box-sizing: border-box;
+
+        text-indent: initial;
+        border-spacing: 2px;
+
+        border-color: gray;
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr {
+
+
+
+
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+
+                th {
+                    font-size: 26px;
+                    font-weight: bold;
+                    padding: 10px 5px;
+
+                    display: table-cell;
+                    vertical-align: inherit;
+                    font-weight: bold;
+                    text-align: -internal-center;
+                }
+
+
+                #khungDoiMatKhau {
+                    padding: 0;
+                    border-bottom: 1px solid #ccc;
+                    border-top: 1px solid #ccc;
+                    align-items: right;
+
+                }
+
+
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8),
+                &:nth-child(9),
+                &:nth-child(10) {
+                    td:first-child {
+                        font-weight: bold;
+                        // text-align: right;
+                    }
+                }
+
+
+                td {
+
+
+                    font-size: 18px;
+                    display: table-cell;
+                    vertical-align: inherit;
+
+
+
+
+                    input {
+                        font-size: 15px;
+                        border-radius: 5px;
+                        text-align: center;
+                        transition-duration: .15s;
+                        border: 1px solid #aaa;
+
+                        &:read-only {
+                            border: 1px solid transparent;
+                        }
+                    }
+
+                    input[type="text" i] {
+                        padding-block: 1px;
+                        padding-inline: 2px;
+                    }
+
+                    input[type="password" i] {
+                        -webkit-text-security: disc !important;
+                        padding-block: 1px;
+                        padding-inline: 2px;
+                    }
+
+                    .fa-pencil {
+                        text-align: center;
+                        border-radius: 5px;
+                        font-size: 1em;
+                        padding: 7px;
+                        transition-duration: .2s;
+                        cursor: pointer;
+                        min-width: 70px;
+
+                        &::before {
+                            content: "\f040";
+                        }
+                    }
+
+                    .fa {
+                        display: inline-block;
+                        font: normal normal normal 14px/1;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.listDonHang {
+    .listSanPham {
+        margin: 50px auto;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table {
+        border-collapse: separate;
+        text-indent: initial;
+        border-spacing: 2px;
+        display: table;
+        border-collapse: separate;
+        box-sizing: border-box;
+        text-indent: initial;
+        border-spacing: 2px;
+        border-color: gray;
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+
+
+
+                th {
+                    text-align: center;
+                    border: 1px solid #ddd;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color: #4CAF50;
+                    color: white;
+                    display: table-cell;
+                    vertical-align: inherit;
+                    font-weight: bold;
+                    text-align: -internal-center;
+
+                    h3 {
+                        display: block;
+                        font-size: 1.17em;
+                        margin-block-start: 1em;
+                        margin-block-end: 1em;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        font-weight: bold;
+                    }
+                }
+
+                &:nth-of-type(even) {
+                    background-color: #f2f2f2;
+                }
+
+                .noPadding {
+                    padding: 0 0 0 10px;
+                    line-height: 2.5em;
+                }
+
+                .alignRight {
+                    text-align: right;
+                    padding-right: 30px;
+                }
+
+                .soluong {
+                    text-align: center;
+                }
+
+                td {
+                    border: 1px solid #ddd;
+                    display: table-cell;
+                    vertical-align: inherit;
+
+                    a {
+                        display: block;
+                        position: relative;
+                        padding: 5px 0;
+                        text-decoration: none;
+                        color: #222;
+                        cursor: pointer;
+                    }
+
+
+                }
+
+                .imgHide {
+                    a {
+                        img {
+                            position: absolute;
+                            // right: -50px;
+                            width: 150px;
+                            height: 0;
+                            border-radius: 10px;
+                            transition-duration: .1s;
+                            overflow-clip-margin: content-box;
+                            overflow: clip;
+                        }
+
+                        &:hover img {
+                            height: 150px;
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+    }
+}

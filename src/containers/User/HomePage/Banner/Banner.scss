@@ -1,0 +1,154 @@
+.banner-container {
+    // width : 100%;
+    // height: 300px;
+    // border: 1px solid red;
+    background: #f5f5f5;
+    padding-top: 10px;
+    border-bottom: 1px solid #e1e1e1;
+
+    &::-webkit-scrollbar {
+        width: 0.7em;
+        height: 0.7em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #999;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #eee;
+    }
+
+    .owl-carousel {
+        display: block;
+        width: 100%;
+        z-index: 1;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+
+        .owl-stage-outer {
+            position: relative;
+            overflow: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+
+            .owl-stage {
+                transition: all 0.45s ease 0s;
+                width: 17400px;
+                transform: translate3d(-6742px, 0px, 0px);
+                position: relative;
+                -ms-touch-action: pan-Y;
+                touch-action: manipulation;
+                -moz-backface-visibility: hidden;
+
+                &::after {
+                    content: ".";
+                    display: block;
+                    clear: both;
+                    visibility: hidden;
+                    line-height: 0;
+                    height: 0;
+                }
+
+                .owl-item {
+                    -ms-touch-action: pan-y;
+                    touch-action: pan-y;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    min-height: 1px;
+                    float: left;
+                    -webkit-backface-visibility: hidden;
+                    -webkit-tap-highlight-color: transparent;
+                    position: relative;
+
+                    a {
+                        text-decoration: none;
+                        color: #222;
+
+                        &:-webkit-any-link {
+                            cursor: pointer;
+                        }
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            // overflow-clip-margin: content-box;
+                            overflow: clip;
+                        }
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            color: #FFF;
+            font-size: 14px;
+            margin: 5px;
+            padding: 4px 7px;
+            background: #D6D6D6;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 3px;
+
+            .owl-prev {
+                background: 0 0;
+                color: inherit;
+                border: none;
+                padding: 0 !important;
+                font: inherit;
+                user-select: none;
+            }
+
+            .owl-next {
+                background: 0 0;
+                color: inherit;
+                border: none;
+                padding: 0 !important;
+                font: inherit;
+                user-select: none;
+            }
+        }
+
+        .disabled {
+            display: none;
+        }
+
+        .owl-dots {
+            margin-top: 10px;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+
+            .owl-dot {
+                display: inline-block;
+                zoom: 1;
+
+                span {
+                    width: 10px;
+                    height: 10px;
+                    margin: 5px 7px;
+                    background: #D6D6D6;
+                    display: block;
+                    -webkit-backface-visibility: visible;
+                    transition: opacity .2s ease;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+
+    .owl-theme {}
+
+    .owl-drag {}
+
+    .owl-loaded {
+        display: block;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+    }
+
+}

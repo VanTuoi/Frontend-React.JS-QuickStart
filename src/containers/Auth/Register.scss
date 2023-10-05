@@ -1,27 +1,28 @@
 .register-background {
-    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    height: 100vh;
+    background: #F0F0F0;
+    height    : 100vh;
 
     .register-container {
-        width: 410px;
-        height: 500px;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        width           : 410px;
+        height          : 500px;
+        margin          : auto;
+        position        : absolute;
+        top             : 0;
+        bottom          : 0;
+        left            : 0;
+        right           : 0;
         background-color: white;
-        border-radius: 10px;
+        border-radius   : 10px;
+        box-shadow      : 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 
         .register-content {
 
 
             .container-fnln {
-                display: flex;
+                display       : flex;
                 flex-direction: row;
-                align-items: center;
-                padding: 0px 0px !important;
+                align-items   : center;
+                padding       : 0px 0px !important;
 
                 .container-fnln-one {
                     .form-control-error {
@@ -31,8 +32,8 @@
                     span {
 
                         text-align: left !important;
-                        font-size: 10px;
-                        color: red;
+                        font-size : 10px;
+                        color     : red;
                     }
                 }
 
@@ -52,9 +53,9 @@
             padding: 10px;
 
             .text-register {
-                text-align: center;
+                text-align : center;
                 font-weight: 600;
-                font-size: 24px;
+                font-size  : 24px;
                 padding-top: 10px;
             }
 
@@ -70,16 +71,16 @@
 
                     i {
                         position: absolute;
-                        right: 8px;
-                        top: 11px;
-                        cursor: pointer;
+                        right   : 8px;
+                        top     : 11px;
+                        cursor  : pointer;
                     }
                 }
 
                 .radio-group {
-                    display: flex;
+                    display       : flex;
                     flex-direction: row;
-                    align-items: center;
+                    align-items   : center;
 
                     input {
                         margin-right: 5px;
@@ -88,7 +89,7 @@
                     label {
 
                         margin-right: 10px;
-                        margin-top: 5px !important;
+                        margin-top  : 5px !important;
                     }
                 }
 
@@ -96,8 +97,8 @@
 
                     .container-gender-one {
 
-                        border: 1px solid #ccd0d5;
-                        box-sizing: border-box;
+                        border       : 1px solid #ccd0d5;
+                        box-sizing   : border-box;
                         border-radius: 5px;
 
 
@@ -105,18 +106,18 @@
 
                     .container-gender-two {
 
-                        border: 1px solid #ccd0d5;
-                        box-sizing: border-box;
+                        border       : 1px solid #ccd0d5;
+                        box-sizing   : border-box;
                         border-radius: 5px;
-                        margin-left: 47px;
+                        margin-left  : 47px;
 
                     }
 
                     .container-gender-three {
 
-                        border: 1px solid #ccd0d5;
-                        box-sizing: border-box;
-                        border-radius: 5px;
+                        border         : 1px solid #ccd0d5;
+                        box-sizing     : border-box;
+                        border-radius  : 5px;
                         // margin-right: 10px;
 
                         margin-left: 47px;
@@ -131,15 +132,15 @@
             }
 
             .btn-register {
-                width: 100%;
-                height: 30px;
-                margin: 10px 0;
+                width        : 100%;
+                height       : 30px;
+                margin       : 10px 0;
                 border-radius: 15px;
-                color: white;
-                font-size: 20px;
-                outline: none;
-                border: none;
-                background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+                color        : white;
+                font-size    : 20px;
+                outline      : none;
+                border       : none;
+                background   : #3d8aef
             }
 
             .forgot-password {
@@ -147,34 +148,34 @@
             }
 
             .social-register {
-                display: flex;
-                text-align: center;
+                display        : flex;
+                text-align     : center;
                 justify-content: center;
-                margin-top: 10px;
+                margin-top     : 10px;
 
                 .google {
-                    font-size: 30px;
-                    background: rgb(212, 60, 60);
-                    border-radius: 50%;
-                    height: 50px;
-                    width: 50px;
-                    display: flex;
-                    align-items: center;
+                    font-size      : 30px;
+                    background     : rgb(212, 60, 60);
+                    border-radius  : 50%;
+                    height         : 50px;
+                    width          : 50px;
+                    display        : flex;
+                    align-items    : center;
                     justify-content: center;
-                    color: white;
-                    margin-right: 10px;
+                    color          : white;
+                    margin-right   : 10px;
                 }
 
                 .facebook {
-                    font-size: 30px;
-                    background: rgb(18, 70, 148);
-                    border-radius: 50%;
-                    height: 50px;
-                    width: 50px;
-                    display: flex;
-                    align-items: center;
+                    font-size      : 30px;
+                    background     : rgb(18, 70, 148);
+                    border-radius  : 50%;
+                    height         : 50px;
+                    width          : 50px;
+                    display        : flex;
+                    align-items    : center;
                     justify-content: center;
-                    color: white;
+                    color          : white;
                 }
             }
 
@@ -182,15 +183,15 @@
         }
 
         .btn-register {
-            width: 100%;
-            height: 30px;
-            margin: 10px 0;
+            width        : 100%;
+            height       : 30px;
+            margin       : 10px 0;
             border-radius: 15px;
-            color: white;
-            font-size: 20px;
-            outline: none;
-            border: none;
-            background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            color        : white;
+            font-size    : 20px;
+            outline      : none;
+            border       : none;
+            background   : #3d8aef
         }
     }
 }

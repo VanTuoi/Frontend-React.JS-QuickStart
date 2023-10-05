@@ -4,7 +4,7 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-import { handleLoginApi } from '../../services/useService'
+import LoginServiceUser from '../../services/userService'
 
 
 class Login extends Component {
@@ -59,12 +59,13 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
+        // this.props.history.push(`/home/homepage`);
         console.log(this.state)
         this.setState({
             errMessage: '',
         })
         try {
-            let data = await handleLoginApi(this.state.phonenumber, this.state.password);
+            let data = await LoginServiceUser(this.state.phonenumber, this.state.password);
             if (data && data.errCode !== 0) {
                 this.setState({
                     errMessage: data.message,
@@ -72,6 +73,7 @@ class Login extends Component {
             }
             if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user);
+                this.props.adminLoginSuccess(data.user);
                 console.log('login success');
             }
         } catch (error) {
@@ -144,7 +146,7 @@ class Login extends Component {
                         </div>
                         <div className='col-12 text-center' >
                             Bạn chưa có tài khoản <></>
-                            <a onClick={(() => this.handleGoToRegister())}>Đăng ký</a>
+                            <a className='text-primary' onClick={(() => this.handleGoToRegister())}>Đăng ký</a>
                         </div>
                         <span className='col-12 text-center mt-3'>Hoặc đăng nhập với:</span>
                         <div className='col-12 social-login text-center'>
@@ -168,6 +170,7 @@ const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
         userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo)),
+        adminLoginSuccess: (userInfo) => dispatch(actions.adminLoginSuccess(userInfo)),
     };
 };
 

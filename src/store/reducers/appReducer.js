@@ -3,7 +3,6 @@ import actionTypes from '../actions/actionTypes';
 const initContentOfConfirmModal = {
     isOpen: false,
     messageId: "",
-    isAdmin: "NO",
     handleFunc: null,
     dataFunc: null
 }
@@ -11,7 +10,7 @@ const initContentOfConfirmModal = {
 const initialState = {
     started: true,
     language: 'vi',
-    systemMenuPath: '/home',
+    systemMenuPath: '/admin/overview',
     contentOfConfirmModal: {
         ...initContentOfConfirmModal
     }
@@ -36,19 +35,6 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 language: action.language,
-            }
-        case actionTypes.PROCESS_GOTO_LOGIN:
-            console.log('run login');
-            state.systemMenuPath = '/home'
-            return {
-                ...state,
-                systemMenuPath: ''
-            }
-        case actionTypes.PROCESS_GOTO_REGISTER:
-            console.log('run reg');
-            return {
-                ...state,
-                systemMenuPath: '/a'
             }
         default:
             return state;

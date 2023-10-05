@@ -1,0 +1,470 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    outline    : none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+.homepage-container {
+    padding-left : 20px;
+    padding-right: 20px;
+    min-width    : 1024px;
+
+    #goto-top-page {
+        position           : fixed;
+        bottom             : 15px;
+        right              : 15px;
+        z-index            : 100;
+        background         : rgba(0, 0, 0, .2);
+        color              : #fff;
+        font-size          : 18px;
+        border-radius      : 50%;
+        width              : 40px;
+        height             : 40px;
+        line-height        : 40px;
+        text-align         : center;
+        cursor             : pointer;
+        transition-duration: .2s;
+        border             : none;
+
+        &:hover {
+            // background: rgba(0, 0, 0, .7);
+            width      : 50px;
+            height     : 50px;
+            line-height: 50px;
+        }
+    }
+
+    .fa {
+        display  : inline-block;
+        // font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+    }
+
+    .fa-arrow-up::before {
+        content: "\f062";
+    }
+
+    hr {
+        color              : #e9e8e8;
+        background-color   : #ddd;
+        border-top         : 1px solid #ddd;
+        unicode-bidi       : isolate;
+        margin-block-start : 0.5em;
+        margin-block-end   : 0.5em;
+        margin-inline-start: auto;
+        margin-inline-end  : auto;
+        overflow           : hidden;
+        border-style       : inset;
+        border-width       : 1px;
+    }
+
+    .slick-prev {
+
+        border    : 2px solid #d7d7d7 !important;
+        background: #ffffffab !important;
+        left      : -10px !important;
+        z-index   : 1000 !important;
+        height    : 48px !important;
+        width     : 44px !important;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.879) !important;
+        }
+    }
+
+    .slick-prev:before {
+        font-size  : 30px !important;
+        line-height: 1.5 !important;
+        font-family: FontAwesome !important;
+        color      : gray;
+    }
+
+    .slick-next {
+        border    : 2px solid #d7d7d7 !important;
+        background: #ffffffab !important;
+        right     : 15px !important;
+        z-index   : 1000;
+        height    : 48px !important;
+        width     : 44px !important;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.879) !important;
+        }
+    }
+
+    .slick-next:before {
+        font-size  : 30px !important;
+        line-height: 1.5 !important;
+        font-family: FontAwesome !important;
+        color      : gray;
+    }
+
+    .slick-disabled {
+        display: none !important;
+    }
+
+    .section-share {
+
+
+        &.section-specialty {
+            background: #f5f5f5;
+        }
+
+        &.section-outstanding-doctor {
+            background-color: #f5f5f5;
+        }
+
+        &.section-about {
+            border: 1px solid red;
+        }
+
+        .section-body {
+            // display: -webkit-box;
+            // display: -ms-flexbox;
+            // display: flex;
+            -ms-flex-wrap        : wrap;
+            flex-wrap            : wrap;
+            -webkit-box-orient   : horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction   : row;
+            flex-direction       : row;
+            -webkit-box-pack     : center;
+            -ms-flex-pack        : center;
+            justify-content      : center;
+
+            .section-customize {
+                list-style-type            : none;
+                cursor                     : pointer;
+                width                      : 238px;
+                border                     : 1px solid #eee;
+                -webkit-transition-duration: .3s;
+                -o-transition-duration     : .3s;
+                transition-duration        : .3s;
+                display                    : list-item;
+                position                   : relative;
+
+                .bg-image {
+                    display        : block;
+                    position       : relative;
+                    padding        : 10px 0;
+                    // height: 310px;
+                    text-decoration: none;
+                    color          : #222;
+                    cursor         : pointer;
+
+                    // position: relative;
+
+                    img {
+                        display                    : block;
+                        margin                     : 15px auto;
+                        -webkit-transition-duration: 0.2s;
+                        -o-transition-duration     : 0.2s;
+                        transition-duration        : 0.2s;
+                        width                      : 200px;
+                        height                     : 200px;
+                        // overflow-clip-margin: content-box;
+                        overflow                   : clip;
+                        vertical-align             : middle;
+                        border-style               : none;
+
+                        &:hover {
+                            margin: 5px auto 25px;
+                        }
+                    }
+
+
+                }
+
+                h3 {
+                    display    : block;
+                    padding    : 0 10px;
+                    color      : #333;
+                    line-height: 1.3em;
+                    font-size  : 15px;
+                    font-weight: normal;
+
+                    &:hover {
+                        color: #288ad6;
+                    }
+                }
+
+                h3 .price {
+                    display: block;
+                    padding: 5px 10px 0px 10px;
+
+                    strong {
+                        display       : inline-block;
+                        vertical-align: middle;
+                        overflow      : hidden;
+                        font-size     : 14px;
+                        color         : #e10c00;
+                        line-height   : 15px;
+                    }
+
+                    span {
+                        display        : inline-block;
+                        vertical-align : middle;
+                        font-size      : 12px;
+                        text-decoration: line-through;
+                        margin-left    : 5px;
+                        color          : #222;
+                    }
+
+                }
+
+                .ratingresult {
+                    padding: 5px 10px;
+
+                    span {
+                        display        : inline-block;
+                        /*position     : relative;*/
+                        top            : 1px;
+                        margin-left    : 5px;
+                        vertical-align : middle;
+                        text-decoration: none;
+                        font-size      : 12px;
+                        color          : #777;
+                    }
+
+                    .fa {
+                        display                : inline-block;
+                        // font: normal normal normal 14px/1 FontAwesome;
+                        font-size              : inherit;
+                        text-rendering         : auto;
+                        -webkit-font-smoothing : antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+
+                    .fa-star,
+                    .fa-star-o {
+                        color: orange;
+                    }
+                }
+
+                label {
+                    display      : inline-block;
+                    position     : absolute;
+                    top          : 207px;
+                    left         : 10px;
+                    font-size    : 12px;
+                    color        : #fff;
+                    font-weight  : 600;
+                    border-radius: 2px;
+                    padding      : 3px 5px 0;
+                    height       : 18px;
+                }
+
+                .giamgia {
+                    background-image: -webkit-gradient(linear, left top, right top, from(#ff9c00), to(#ec1f1f));
+                    background-image: -webkit-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+                    background-image: -o-linear-gradient(left, #ff9c00 0%, #ec1f1f 100%);
+                    background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
+                    border-radius   : 10px;
+                    padding         : 1px 7px;
+                    padding-left    : 0;
+                    padding-right   : 10px;
+
+                    .fa {
+                        display                : inline-block;
+                        font                   : normal normal normal 14px/1 FontAwesome;
+                        font-size              : inherit;
+                        text-rendering         : auto;
+                        -webkit-font-smoothing : antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+
+                    .fa-bolt {
+                        width        : 20px;
+                        height       : 20px;
+                        text-align   : center;
+                        line-height  : 20px;
+                        border-radius: 50%;
+                        //background: #f21;
+                        color        : white;
+                    }
+                }
+
+                .giareonline {
+                    background: #3fb846;
+                }
+
+                .moiramat {
+                    background: #1191f8;
+                }
+
+                .tragop {
+                    background: #f28902;
+                }
+
+                .tool-tip-1 {
+                    position: absolute;
+                    display : inline-block;
+                    bottom  : 10px;
+                    right   : 10px;
+
+
+                    .add-product {
+                        z-index            : 20;
+                        border             : 1px solid #e3e7eb;
+                        border-radius      : 50%;
+                        width              : 1.5em;
+                        height             : 1.5em;
+                        font-size          : 1.5em;
+                        color              : rgb(163, 161, 161);
+                        background         : none;
+                        transition-duration: .2s;
+                        cursor             : pointer;
+                        padding            : 0px;
+
+                        &:hover {
+                            color           : black;
+                            background-color: #e6e6e6;
+                            box-shadow      : 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+                        }
+
+                        &:active {
+                            box-shadow: none;
+                        }
+
+
+                    }
+
+
+
+
+
+
+                }
+
+
+
+
+                &.section-outstanding-doctor {
+                    // background-image: url('../../assets/outstanding_doctor/bacsi.png');
+                    width        : 120px !important;
+                    height       : 120px !important;
+                    border-radius: 50%;
+                }
+
+
+            }
+
+            .section-content {
+                font-size  : 15px;
+                font-weight: 300;
+
+                &:hover {
+                    color: #47C4D3;
+                }
+            }
+
+
+        }
+    }
+
+
+
+}
+
+.section-share {
+    // height: 330px;
+
+    .section-container {
+        width        : 100%;
+        margin       : 50px 0;
+        border-radius: 5px;
+        // border: 2px solid #ff4d00;
+        box-sizing   : border-box;
+
+
+
+        .section-header {
+            margin-top   : 2px;
+            margin-left  : 10px;
+            //padding-top: 10px;
+            // height: 60px;
+
+            .title-section {
+                line-height  : 1.5em;
+                font-size    : 1.5em;
+                text-align   : center;
+                margin       : 0 auto;
+                border-radius: 0.5em;
+                color        : #ffffff;
+                padding      : 2px 15px;
+                transform    : translateY(-0.75em);
+
+            }
+
+
+            .btn-section {
+                font-size       : 13px;
+                font-weight     : 500;
+                padding         : 5px 16px;
+                background-color: #ebebeb;
+                color           : gray;
+                border          : none;
+                float           : right;
+
+
+                &:hover {
+                    background-color: rgba(252, 216, 69, 1);
+                    color           : white;
+                }
+            }
+        }
+
+
+    }
+
+    .MostOutStanding {}
+
+    .NewProduct {}
+
+}
+
+.section-outstanding-doctor {
+    .section-customize {
+        padding: 5px;
+
+        .customize-border {
+            padding: 20px;
+            border : 1px solid gray;
+        }
+    }
+
+
+    .outer-bg {
+        display           : flex;
+        justify-content   : center;
+        margin-bottom     : 10px;
+        // border         : 1px solid red;
+
+        .bg-image {}
+    }
+}
+
+.home-footer {
+    padding-top: 10px;
+
+    a {
+        text-decoration: unset;
+
+    }
+}
+
+.section-about {
+    margin: 0 100px;
+    border: 2px solid #870909 !important;
+
+    .section-about-header {
+        padding    : 20px 10px;
+        font-size  : 20px;
+        font-weight: 600;
+    }
+}

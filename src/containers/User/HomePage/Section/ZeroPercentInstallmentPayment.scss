@@ -1,0 +1,33 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+.section-share {
+    .section-container {
+        .section-header {
+            .title-section {}
+
+            .title-section-ZeroPercentInstallmentPayment {
+                background: rgb(212, 64, 64) !important;
+                background: linear-gradient(90deg, rgba(212, 64, 64, 1) 0%, rgba(223, 122, 58, 1) 50%, rgba(252, 216, 69, 1) 100%) !important;
+            }
+
+            .btn-section {}
+        }
+
+        a .section-body {
+            .section-customize {
+                .bg-image {}
+
+                .section-MostOutStanding {}
+
+                .section-content {}
+            }
+        }
+    }
+
+    .ZeroPercentInstallmentPayment {
+        border: 2px solid rgba(223, 122, 58, 1);
+    }
+}

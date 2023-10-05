@@ -4,7 +4,7 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Register.scss';
 import { FormattedMessage } from 'react-intl';
-import { handleRegisterApi } from '../../services/useService'
+import { RegisterService } from '../../services/userService'
 import { toast } from 'react-toastify';
 
 class Register extends Component {
@@ -344,8 +344,7 @@ class Register extends Component {
 
                     <div className='col-12 text-center' >
                         Bạn đã có tài khoản <></>
-                        <a href='http://localhost:3000/login'>Đăng nhập</a>
-                        <button onClick={() => this.handleGoToLogin()}>DDang nhap</button>
+                        <a className='text-primary' onClick={() => this.handleGoToLogin()}>Đăng nhập</a>
                     </div>
                 </div>
 

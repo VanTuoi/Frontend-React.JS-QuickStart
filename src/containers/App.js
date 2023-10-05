@@ -5,25 +5,15 @@ import { ConnectedRouter as Router } from 'connected-react-router';
 import { history } from '../redux'
 import { ToastContainer } from 'react-toastify';
 import CustomScrollbars from '../components/CustomScrollbars.js'
-import DetailProduct from './ProductDetailPage/DetailProduct'
 
-import { userIsAuthenticated, userIsNotAuthenticated, userIsAdmin, userIsNotAdmin } from '../hoc/authentication';
+import { userIsAuthenticated, userIsNotAuthenticated, userIsAdmin, userIsNotAdmin, userIsAuthenticatedRedirect } from '../hoc/authentication';
 
 import { path } from '../utils'
 
-import HomeUser from '../routes/HomeUser';
-import Cart from '../containers/Cart/Cart';
-import HomeAdmin from '../routes/HomeAdmin';
+import Home from '../routes/Home';
+import Admin from '../routes/Admin';
 import Register from './Auth/Register';
 import Login from './Auth/Login';
-// import Register from '../routes/Register'
-import Header from './Header/Header';
-import System from '../routes/System';
-// import Register from '../containers/Auth/Register'
-
-import { CustomToastCloseButton } from '../components/CustomToast';
-import ConfirmModal from '../components/ConfirmModal';
-import HomePage from './HomePage/HomePage.js'
 
 class App extends Component {
 
@@ -50,20 +40,14 @@ class App extends Component {
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
-                        {/* {this.props.isLoggedIn && <Header />} */}
-
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
                                 <Switch>
-                                    <Route path={path.REGISTER} exact component={(Register)} />
-                                    <Route path={path.CART} exact component={(Cart)} />
-                                    <Route path={path.HOME} exact component={(HomeUser)} />
-                                    <Route path={path.HOME_ADMIN} exact component={(HomeAdmin)} />
-                                    <Route path={path.HOMEPAGE} exact component={(HomePage)} />
-                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                    <Route path={path.DETAIL_DOCTOR} component={DetailProduct} />
-
+                                    {/* <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} /> */}
+                                    <Route path={'/login'} exact component={(Login)} />
+                                    <Route path={'/register'} exact component={(Register)} />
+                                    <Route path={'/admin'} component={(Admin)} />   {/* admin */}
+                                    <Route path={'/home'} component={(Home)} />
                                 </Switch>
                             </CustomScrollbars>
                         </div>

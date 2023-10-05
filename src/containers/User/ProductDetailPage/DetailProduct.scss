@@ -1,0 +1,95 @@
+.product-detail-container {
+    height: 500px;
+
+    .title-product {
+        font-size    : 25px;
+        font-weight  : 700;
+        color        : black;
+        display      : flex;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    .product {
+        .img-product {}
+
+        .price-products {
+            .price-new {
+                font-size  : 25px;
+                font-weight: 700;
+                color      : #E10C00;
+            }
+
+            .price-old {
+                font-size      : 20px;
+                font-weight    : 500;
+                color          : black;
+                text-decoration: line-through;
+            }
+
+            .border-item {
+                border-radius: 3px;
+                border       : 1px solid rgb(183, 179, 179);
+
+                .promotion {
+                    font-size  : 20px;
+                    font-weight: 600;
+                    color      : black;
+                }
+            }
+
+
+
+        }
+
+        .infor-product {
+            border-radius: 3px;
+            border       : 1px solid rgb(183, 179, 179);
+
+            .detail {
+                font-size  : 20px;
+                font-weight: 600;
+                color      : black;
+            }
+
+            .configuration {
+                font-size  : 18px;
+                font-weight: 500;
+                color      : #333333;
+
+                .configuration-item:nth-child(odd) {
+                    background-color: #F5F5F5;
+                }
+            }
+
+
+        }
+    }
+
+    .comment {
+
+
+        .title-comment {
+            font-size  : 22px;
+            font-weight: 600;
+            color      : black;
+        }
+
+        .list-comment {
+            border-radius: 2px;
+            border       : 1px solid rgb(183, 179, 179);
+
+            .comment-item {
+                .time {
+                    font-size  : 12px;
+                    font-weight: 500;
+                    color      : gray;
+                }
+            }
+
+            .comment-item:nth-child(odd) {
+                background-color: #F5F5F5;
+            }
+        }
+    }
+
+}
